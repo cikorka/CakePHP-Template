@@ -127,7 +127,7 @@ foreach ($exclude as $unset) {
 		</th>
 	</tr>
 
-<?
+<?php
 
 if ($batch === true) {
 	$batchFields = array(null => array());
