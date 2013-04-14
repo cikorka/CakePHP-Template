@@ -242,7 +242,7 @@ $i = 0;
 					<th width="10" class="actions">Actions</th>
 				</tr>
 
-				<?
+				<?php
 
 				if ($batch === true) {
 					$batchFields = array(null => array());

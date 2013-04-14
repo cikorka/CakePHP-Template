@@ -14,6 +14,8 @@
  * @link        https://github.com/cikorka/CakePHP-Template
  */
 
+try {
+
 ?>
 <?php if (class_exists('AuthComponent') && AuthComponent::user()) :	?>
 
@@ -35,4 +37,8 @@
 	<?php echo $this->Form->submit(__d('app_users', 'Login'), array('class' => 'btn','div' => false, 'label' => false)); ?>
 	<?php echo $this->Form->end(); ?>
 
-<?php endif; ?>
+<?php endif;
+
+} catch(Exception $e) {
+	
+}
