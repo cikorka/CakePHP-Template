@@ -175,7 +175,7 @@
             </script>
             <script src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
             -->
-            <div class="logo"><a href="http://www.jerabkovi.eu">Jeřábek!WEB</a></div>
+            <div class="logo"><a href="<?php echo Configure::read('App.url'); ?>"><?php echo Configure::read('App.name'); ?></a></div>
         </div>
     </body>
 </html>
