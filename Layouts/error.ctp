@@ -19,7 +19,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title><? echo $title_for_layout; ?> :(</title>
+        <title><?php echo $title_for_layout; ?> :(</title>
         <style>
             ::-moz-selection {
                 background: #b3d4fc;
