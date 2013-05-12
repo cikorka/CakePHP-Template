@@ -1,0 +1,4 @@
+<FilesMatch index.default.html>
+  Order Deny,Allow
+  Deny from all
+</FilesMatch>

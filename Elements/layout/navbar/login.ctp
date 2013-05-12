@@ -20,13 +20,9 @@ try {
 <?php if (class_exists('AuthComponent') && AuthComponent::user()) :	?>
 
 	<p class="navbar-text pull-right">
-
 		<?php echo __('Logged in as'); ?>
-
-		<?php echo $this->Html->link(AuthComponent::user('username'), array('controller' => 'users', 'action' => 'profile'), array('class' => 'navbar-link', 'onclick' => "_gaq.push(['_trackEvent', 'Videos', 'Play', 'Baby\'s First Birthday']);", 'escape' => false)); ?>
-
+		<?php echo $this->Html->link(AuthComponent::user('username'), array('controller' => 'users', 'action' => 'profile'), array('class' => 'navbar-link', 'escape' => false)); ?>
 		<?php echo $this->Html->link('<i class="icon-off"></i>', array('controller' => 'users', 'action' => 'logout'), array('escape' => false, 'class' => 'navbar-link')); ?>
-
 	</p>
 
 <?php else : ?>
@@ -40,5 +36,5 @@ try {
 <?php endif;
 
 } catch(Exception $e) {
-	
+
 }

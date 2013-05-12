@@ -16,5 +16,5 @@
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-?>
-<?php echo $this->fetch('content'); ?>
+
+echo $this->fetch('content');

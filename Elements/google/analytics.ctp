@@ -14,9 +14,12 @@
  * @link        https://github.com/cikorka/CakePHP-Template
  */
 
-$ga  = "var _gaq=[['_setAccount','$account'],['_trackPageview']];\n";
-$ga .= "(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];\n";
-$ga .= "g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';\n";
-$ga .= "s.parentNode.insertBefore(g,s)}(document,'script'));";
+if (isset($account) && !empty($account)) {
+	$scriptBlock  = "var _gaq=[['_setAccount','$account'],['_trackPageview']];\n";
+	$scriptBlock .= "(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];\n";
+	$scriptBlock .= "g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';\n";
+	$scriptBlock .= "s.parentNode.insertBefore(g,s)}(document,'script'));";
 
-echo $this->Html->scriptBlock($ga);
+	echo $this->Html->scriptBlock($scriptBlock);
+	unset($scriptBlock);
+}

@@ -24,26 +24,20 @@
 		<?php
 			echo $this->Html->tag('title', $title_for_layout);
 			echo $this->Html->charset();
-			//echo $this->Html->meta(array('http-equiv' => 'X-UA-Compatible', 'content' => 'IE=edge,chrome=1'));
+			echo $this->Html->meta(array('http-equiv' => 'X-UA-Compatible', 'content' => 'IE=edge,chrome=1'));
 			echo $this->Html->meta(array('name' => 'viewport', 'content' => 'width=device-width'));
 			echo $this->Html->meta(array('name' => 'robots', 'content' => 'index,follow'));
 			echo $this->fetch('meta');
 			echo $this->Html->meta('icon');
-			//echo $this->element('layout/apple_touch_icons');
-
-		/**
-		 * If you would this template without FontAwesome, uncomment this line
-		 */
-			//echo $this->Html->css('bootstrap');
+			echo $this->element('layout/apple_touch_icons');
 
 		/**
 		 * Bootstrap with Font Awesome icons and IE7 Font Awesome stylesheets
 		 */
-			echo $this->Html->css('bootstrap-font-awesome');
-			echo sprintf('<!--[if IE 7]>%s<![endif]-->', $this->Html->css('font-awesome-ie7'));
+			echo $this->Html->css('main.min');
+			echo sprintf('<!--[if IE 7]>%s<![endif]-->', $this->Html->css('ie7'));
 
-			echo $this->Html->css('bootstrap-responsive');
-			echo $this->Html->css('main');
+			echo $this->Html->css('responsive.min');
 
 			echo $this->fetch('css');
 			$this->assign('css', '');
@@ -125,7 +119,7 @@
 			echo $this->Js->writeBuffer();
 		?>
 			<div class="container">
-				<?php //echo $this->element('sql_dump'); ?>
+				<?php echo $this->element('sql_dump'); ?>
 			</div>
 	</body>
 </html>
